@@ -19,17 +19,17 @@ const team = [
   {
     name: "Okon Joseph Itoro",
     role: "Frontend developer",
-    image: "itoro.jpg",
+    image: "images/itoro.jpg",
   },
   {
     name: "Isinkaye Iyanu",
     role: "Software developer and Content Creator",
-    image: "Iyanu.jpg",
+    image: "images/Iyanu.jpg",
   },
   {
     name: "Isaac Gabriel Umoh",
     role: "Frontend developer and Musical Instrumentalists",
-    image: "fine isaac.jpg",
+    image: "images/fine isaac.jpg",
   },
 ]
 
