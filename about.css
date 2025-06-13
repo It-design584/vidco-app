@@ -1,0 +1,887 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif, Poppins;
+}
+
+body {
+  background-color: #f7f7f7;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background-color: white;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #f7f7f7;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1001;
+}
+
+.logo img {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-text {
+  color: #9b4dca;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.desktop-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-left: 1200px;
+}
+
+.desktop-nav a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.desktop-nav a:hover {
+  color: #9b4dca;
+  transform: translateY(-2px);
+}
+
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #9b4dca;
+  transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+  transform: scale(1.1);
+}
+
+.mobile-menu-btn span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.mobile-menu-btn:hover span {
+  background-color: #9b4dca;
+  transform: scaleX(1.1);
+}
+
+.mobile-menu-btn:hover span:nth-child(1) {
+  transform: scaleX(1.2);
+}
+
+.mobile-menu-btn:hover span:nth-child(2) {
+  transform: scaleX(0.9);
+}
+
+.mobile-menu-btn:hover span:nth-child(3) {
+  transform: scaleX(1.2);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: #9b4dca;
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: #9b4dca;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 1000;
+  padding-top: 80px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.mobile-nav a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #9b4dca;
+}
+
+.sign-up-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #141EFF;
+  border: 1px solid #141EFF;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  z-index: 1001;
+  position: relative;
+}
+
+.sign-up-btn:hover {
+  background-color: #141EFF;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #3b29b9, #ae79f1, #c76bda);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Simple Design Section */
+.simple-design {
+  padding: 40px 30px;
+}
+
+.two-columns {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  color: #998da0;
+}
+
+.column {
+  flex: 1;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #463853;
+}
+
+.content-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #998da0;
+  margin-bottom: 15px;
+}
+
+.bullet-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.bullet-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Team Photo Section */
+.team-photo {
+  padding: 0 30px 40px;
+}
+
+.team-image {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  border-radius: 50px;
+}
+
+/* Details Section */
+.details {
+  padding: 40px 30px;
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+  margin: 20px 0;
+}
+
+.rating i {
+  color: #ffd700;
+  font-size: 18px;
+}
+
+.rating i.far {
+  color: #ddd;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 60px 30px;
+  background-color: #f9f9f9;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  color: #463853;
+}
+
+.testimonials-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+  padding: 2rem 0;
+  position: relative;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-marquee 30s linear infinite;
+  width: fit-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  flex: 0 0 320px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card h3 {
+  font-size: 1.2rem;
+  color: #463853;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.testimonial-card p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  font-weight: 600;
+  color: #9b4dca;
+  font-style: italic;
+  margin-top: auto;
+}
+
+.testimonial-card .rating {
+  margin: 0.5rem 0 0;
+  justify-content: flex-start;
+}
+
+.testimonial-card .rating i {
+  font-size: 14px;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Enhanced Team Section Styles */
+#app {
+  width: 100%;
+  background-color: white;
+}
+
+/* Team Section Styles */
+.team-section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+}
+
+.team-section h1 {
+  color: #2d2d2d;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.team-section .subtitle {
+  color: #666;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+  justify-items: center;
+  align-items: start;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 280px !important;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.team-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.team-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0;
+  border: 4px solid #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.team-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  color: #333;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.team-card p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 200px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.about-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Responsive Design - ADJUSTED BREAKPOINTS */
+
+/* Medium screens / split screen (640px - 1023px) */
+@media (max-width: 1023px) and (min-width: 641px) {
+  /* Adjusted styles for split screen views */
+  header {
+    padding: 15px 20px;
+  }
+
+  .desktop-nav ul {
+    gap: 15px;
+  }
+
+  .desktop-nav a {
+    font-size: 13px;
+  }
+
+  .sign-up-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .team-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .team-card img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Small screens / mobile (640px and below) */
+@media (max-width: 640px) {
+  header {
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  /* Hide desktop nav and show mobile menu button */
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  /* Remove hover effects on mobile and add touch states */
+  .mobile-menu-btn:hover {
+    transform: none;
+  }
+
+  .mobile-menu-btn:active {
+    transform: scale(0.95);
+    background-color: rgba(155, 77, 202, 0.1);
+    border-radius: 4px;
+  }
+
+  .mobile-menu-btn:hover span {
+    background-color: #333;
+    transform: none;
+  }
+
+  .mobile-menu-btn:active span {
+    background-color: #9b4dca;
+  }
+
+  .mobile-menu-btn:hover span:nth-child(1),
+  .mobile-menu-btn:hover span:nth-child(2),
+  .mobile-menu-btn:hover span:nth-child(3) {
+    transform: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  /* Touch-friendly mobile nav links */
+  .mobile-nav a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-nav a:hover {
+    color: #000000;
+  }
+
+  .mobile-nav a:active {
+    background-color: rgba(155, 77, 202, 0.1);
+    color: #9b4dca;
+    transform: scale(0.98);
+  }
+
+  /* Touch-friendly sign up button */
+  .sign-up-btn {
+    font-size: 12px;
+    padding: 8px 14px;
+    margin-left: 0;
+    min-height: 44px; /* Minimum touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sign-up-btn:hover {
+    background-color: transparent;
+    color: #c76bda;
+  }
+
+  .sign-up-btn:active {
+    background-color: #c76bda;
+    color: white;
+    transform: scale(0.98);
+  }
+
+  /* Remove hover effects from team cards on mobile */
+  .team-card img:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-card img:active {
+    transform: scale(0.98);
+  }
+
+  /* Remove hover effects from testimonial cards on mobile */
+  .testimonial-card:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonial-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .two-columns {
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .team-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .team-card {
+    width: 250px !important;
+    height: auto !important;
+    padding: 0;
+  }
+
+  .team-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 280px;
+    padding: 1.5rem;
+  }
+
+  .marquee-track {
+    gap: 1.5rem;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .footer-left .logo img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .about-link {
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .about-link:hover {
+    color: #333;
+  }
+
+  .about-link:active {
+    background-color: rgba(155, 77, 202, 0.1);
+    color: #9b4dca;
+  }
+
+  .footer-right {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .footer-link {
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .footer-link:hover {
+    color: #333;
+  }
+
+  .footer-link:active {
+    background-color: rgba(155, 77, 202, 0.1);
+    color: #9b4dca;
+  }
+}
+
+/* Very small screens (480px and below) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  /* Ensure minimum touch target sizes */
+  .mobile-menu-btn {
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sign-up-btn {
+    min-height: 44px;
+    padding: 10px 16px;
+  }
+
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .simple-design,
+  .details {
+    padding: 30px 20px;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .team-card {
+    width: 100% !important;
+    max-width: 280px !important;
+    height: auto !important;
+  }
+
+  .testimonial-card {
+    flex: 0 0 250px;
+    padding: 1.25rem;
+  }
+
+  .team-section h1 {
+    font-size: 2rem;
+  }
+
+  footer {
+    padding: 12px 15px;
+    gap: 8px;
+  }
+
+  .footer-left {
+    gap: 8px;
+  }
+
+  .footer-left .logo img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .logo-text {
+    font-size: 13px;
+  }
+
+  .about-link {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .footer-right {
+    gap: 8px;
+  }
+
+  .footer-link {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidco1 - About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+       <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="Vector.png" alt="Vidco logo">
+                <span class="logo-text">vidco</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Plans</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <button class="sign-up-btn">Sign Up</button>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                    <li><a href="#" onclick="toggleMobileMenu()">About</a></li>
+                    <li><a href="#" onclick="toggleMobileMenu()">Plans</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Some Words About Us</h1>
+            <p>A dynamic team of software developers and talents collaborates to transform innovative ideas into impactful digital solutions, blending creativity and technical expertise.</p>
+        </section>
+
+        <!-- Simple Design Section -->
+        <section class="simple-design">
+            <h2>We Believe in innovation</h2>
+        
+            <div class="two-columns">
+                <div class="column">
+                    <p class="content-text">This harmonious blend of front-end visionaries and back-end masterminds cultivates a collaborative culture where challenges are embraced as opportunities for growth.</p>
+                    <p class="content-text">They are storytellers crafting powerful digital narratives that connect, empower, and transform lives.</p>
+                </div>
+                <div class="column">
+                    <ul class="bullet-list">
+                        <li>A dynamic team of software developers and talents collaborates to transform innovative ideas into impactful digital solutions.</li>
+                        <li>We embrace challenges as opportunities for growth, exploring emerging technologies to deliver cutting-edge applications that empower users and enhance experiences.</li>
+                        <li>United by shared values of collaboration and integrity, this team is dedicated to shaping a brighter future through technology and inspiring the next generation of innovators.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Photo Section -->
+        <section class="team-photo">
+            <img src="general pic.jpg" alt="Team photo" class="team-image">
+        </section>
+
+
+        <!-- Details Section -->
+        <section class="details">
+            <div class="two-columns">
+                <div class="column">
+                    <h2>We Care About the Details</h2>
+                    <p class="content-text">We prioritize continuous learning and adaptability, embracing the ever-changing landscape of technology to stay ahead of trends and deliver cutting-edge applications</p>
+                    <p class="content-text">Integrity and mutual respect are at the core of their values, fostering a supportive and inclusive environment where every team member can thrive and contribute their best.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2>With knowledge, skill and hard work</h2>
+                    <p class="content-text">The team values continuous learning, constantly expanding their knowledge to stay ahead in the ever-evolving tech landscape</p>
+                    <ul class="bullet-list">
+                        <li>Each member brings a unique set of skills, combining creativity and technical expertise to craft innovative solutions</li>
+                        <li>Their dedication to hard work and collaboration drives them to overcome challenges and achieve excellence in every project they undertake.</li>
+                    </ul>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section - Fixed for infinite scroll -->
+        <section class="testimonials">  
+            <h2 class="section-heading">Why Clients Love Us</h2>
+            <p class="testimonials-intro">
+                The software developed by this team has had a significant positive impact on our operations...
+            </p>
+
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- First set of testimonials -->
+                    <div class="testimonial-card">
+                        <h3>Inspiring Partnership</h3>
+                        <p>They use it every day for planning and organizing my work. Outstanding results!</p>
+                        <p class="author">- John Adedayo</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <h3>Exceptional Quality</h3>
+                        <p>The attention to detail and innovative solutions exceeded our expectations completely.</p>
+                        <p class="author">- Sarah Gideon</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <h3>Professional Excellence</h3>
+                        <p>Working with this team transformed our business processes and improved efficiency.</p>
+                        <p class="author">- Comfort,J.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <h3>Outstanding Support</h3>
+                        <p>Their dedication to client success and ongoing support is truly remarkable.</p>
+                        <p class="author">- Kehinde,I.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <h3>Innovation Leaders</h3>
+                        <p>They brought cutting-edge solutions that positioned us ahead of our competition.</p>
+                        <p class="author">- David Samson</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate set for seamless infinite scroll -->
+                    <div class="testimonial-card">
+                        <h3>Techies</h3>
+                        <p>Expert in different programming language</p>
+                        <p class="author">- John Adedayo</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <h3>Exceptional Quality</h3>
+                        <p>Unique services</p>
+                        <p class="author">- Sarah Johnson</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <h3>Skillful and innovative</h3>
+                        <p>Bringing imagination to reality.</p>
+                        <p class="author">- Aniefiok Joseph</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <h3>Outstanding Support</h3>
+                        <p>Their dedication to client success and ongoing support is truly remarkable.</p>
+                        <p class="author">- Esther Itoro</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <h3>collaborative</h3>
+                        <p>Great team spirit</p>
+                        <p class="author">- Mmeyene Etim Bassey</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+        <!-- Team Section -->
+        <div id="app"></div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-left">
+                <div class="logo">
+                    <img src="Vector.png" alt="Vidco logo">
+                    <span class="logo-text">vidco</span>
+                </div>
+                <a href="#" class="about-link">About Vidco</a>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Terms</a>
+            </div>
+        </footer>
+    </div>
+    <script src="about.js"></script>
+</body>
+</html>
