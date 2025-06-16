@@ -250,8 +250,7 @@ footer {
 
 .footer-right {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .footer-link {
