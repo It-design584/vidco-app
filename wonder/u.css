@@ -466,56 +466,52 @@ a {
   transform: translateY(-2px);
 }
 
-/* Footer Styles - ALWAYS HORIZONTAL */
-.footer {
-  background: #f8f9fa;
-  padding: 2rem 30px;
-}
-
-.footer-content {
+/* Footer Styles - COPIED FROM SIGNUP.CSS FOR HORIZONTAL LAYOUT */
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 1rem;
+  padding: 20px 30px;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  position: relative;
+  z-index: 1;
 }
 
-.footer-logo {
+.footer-left {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 800;
+  gap: 15px;
+}
+
+.about-link {
   color: #6a00ff;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-.footer-logo img {
-  width: 24px;
-  height: 24px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.footer-links a {
-  color: #666;
-  transition: color 0.3s ease;
+  text-decoration: none;
   font-size: 14px;
-  white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.about-link:hover {
+  color: #5500cc;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-link {
   color: #6a00ff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
-/* Responsive Design - Following trial.css approach */
+.footer-link:hover {
+  color: #5500cc;
+}
+
+/* Responsive Design - COPIED FOOTER APPROACH FROM SIGNUP.CSS */
 
 /* Medium screens / split screen (640px - 1023px) */
 @media (max-width: 1023px) and (min-width: 641px) {
@@ -552,16 +548,12 @@ a {
     gap: 1.5rem;
   }
 
-  /* Footer stays horizontal */
-  .footer {
-    padding: 1.5rem 20px;
+  footer {
+    padding: 15px 20px;
   }
 
-  .footer-links {
-    gap: 1.5rem;
-  }
-
-  .footer-links a {
+  .about-link,
+  .footer-link {
     font-size: 13px;
   }
 }
@@ -582,6 +574,10 @@ a {
     display: flex;
     margin-left: auto;
     margin-right: 10px;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Remove hover effects on mobile and add touch states */
@@ -612,6 +608,23 @@ a {
 
   .mobile-nav {
     display: block;
+  }
+
+  /* Touch-friendly mobile nav links */
+  .mobile-nav a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-nav a:hover {
+    color: #000000;
+  }
+
+  .mobile-nav a:active {
+    background-color: rgba(106, 0, 255, 0.1);
+    color: #6a00ff;
+    transform: scale(0.98);
   }
 
   /* Touch-friendly sign up button */
@@ -682,52 +695,73 @@ a {
     max-width: 280px;
   }
 
-  /* Footer REMAINS HORIZONTAL on mobile */
-  .footer {
-    padding: 1.5rem 20px;
-  }
-
-  .footer-content {
-    display: flex;
+  /* Footer horizontal alignment on mobile - COPIED FROM SIGNUP.CSS */
+  footer {
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
     flex-wrap: wrap;
-    gap: 1rem;
   }
 
-  .footer-logo {
-    gap: 6px;
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
   }
 
-  .footer-logo img {
+  .footer-left .logo img {
     width: 20px;
     height: 20px;
   }
 
-  .footer-logo span {
-    font-size: 16px;
+  .logo-text {
+    font-size: 14px;
   }
 
-  .footer-links {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .footer-links a {
+  .about-link {
     font-size: 12px;
+    white-space: nowrap;
     padding: 8px 12px;
     border-radius: 4px;
     transition: all 0.2s ease;
   }
 
-  .footer-links a:hover {
-    color: #666;
+  .about-link:hover {
+    color: #6a00ff;
   }
 
-  .footer-links a:active {
+  .about-link:active {
     background-color: rgba(106, 0, 255, 0.1);
+    color: #5500cc;
+  }
+
+  .footer-right {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .footer-link {
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .footer-link:hover {
     color: #6a00ff;
+  }
+
+  .footer-link:active {
+    background-color: rgba(106, 0, 255, 0.1);
+    color: #5500cc;
   }
 }
 
@@ -742,9 +776,6 @@ a {
     padding: 8px;
     min-width: 44px;
     min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .signup-btn {
@@ -766,46 +797,50 @@ a {
     max-width: 250px;
   }
 
-  /* Footer STILL HORIZONTAL on very small screens */
-  .footer {
-    padding: 1.25rem 15px;
+  footer {
+    padding: 12px 15px;
   }
 
-  .footer-content {
-    gap: 0.75rem;
+  .footer-left {
+    gap: 8px;
   }
 
-  .footer-logo {
-    gap: 5px;
-  }
-
-  .footer-logo img {
+  .footer-left .logo img {
     width: 18px;
     height: 18px;
   }
 
-  .footer-logo span {
-    font-size: 14px;
+  .logo-text {
+    font-size: 13px;
   }
 
-  .footer-links {
-    gap: 0.75rem;
-  }
-
-  .footer-links a {
+  .about-link {
     font-size: 11px;
-    padding: 6px 8px;
+    padding: 6px 10px;
+  }
+
+  .footer-right {
+    gap: 8px;
+  }
+
+  .footer-link {
+    font-size: 11px;
+    padding: 6px 10px;
   }
 }
 
 /* Large screens - ensure proper spacing */
 @media (min-width: 1200px) {
-  .footer-content {
-    padding: 0 2rem;
+  footer {
+    padding: 22px 30px;
   }
   
-  .footer-links {
-    gap: 3rem;
+  .footer-left {
+    gap: 18px;
+  }
+
+  .footer-right {
+    gap: 25px;
   }
 
   .desktop-nav ul {

@@ -4,61 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vidco | Sign Up</title>
-  <link rel="stylesheet" href="/signup.css" />
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- my header section -->
-  <header class="navbar">
-    <div class="logo">vidco</div>
-    <nav>
-      <a href="#">About</a>
-      <a href="#">Plan</a>
-      <button class="get-started">Get Started</button>
-    </nav>
-  </header>
-  
-  <!-- form section -->
-  <main class="main">
-    <div class="form-container">
-      <h2>Sign-up</h2>
-      <form>
-        <div class="form-group">
-          <input type="text" placeholder="First Name" required>
-          <span class="icon"><img src="/svg/user-profile-person-svgrepo-com (1).svg" width="50px"></span>
-        </div>
-        <div class="form-group">
-          <input type="text" placeholder="Last Name" required>
-          <span class="icon"><img src="/svg/user-profile-person-svgrepo-com (1).svg" width="50px"></span>
-        </div>
-        <div class="form-group">
-          <input type="text" placeholder="Other Names">
-          <span class="icon"><img src="/svg/user-profile-person-svgrepo-com (1).svg" width="50px"></span>
-        </div>
-        <div class="form-group">
-          <input type="email" placeholder="Email" required>
-          <span class="icon"><img src="/svg/email-svgrepo-com.svg" width="35px" ></span>
-        </div>
-        <div class="form-group">
-          <input type="text" placeholder="Username" required>
-          <span class="icon"><img src="/svg/user-profile-person-svgrepo-com (1).svg" width="50px"></span>
-        </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password" required>
-          <span class="icon">👁️</span>
-        </div>
-        <button type="submit" class="submit-btn">Sign Up</button>
-        <p class="login-link">Already have an account? <a href="#">Login</a></p>
-      </form>
-    </div>
-  </main>
+  <div class="container">
+    <!-- Header - Same as About Page -->
+    <header>
+      <div class="logo">
+        <img src="/images/Vector.png" alt="Vidco logo">
+        <span class="logo-text">vidco</span>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Plans</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <button class="sign-up-btn">Sign Up</button>
+      
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="#" onclick="toggleMobileMenu()">About</a></li>
+          <li><a href="#" onclick="toggleMobileMenu()">Plans</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Form section -->
+    <main class="main">
+      <div class="form-container">
+        <h2>Sign-up</h2>
+        <form>
+          <div class="form-group">
+            <input type="text" placeholder="First Name" required>
+            <span class="icon">👤</span>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Last Name" required>
+            <span class="icon">👤</span>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Other Names">
+            <span class="icon">👤</span>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" required>
+            <span class="icon">📧</span>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Username" required>
+            <span class="icon">👤</span>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" required>
+            <span class="icon">👁️</span>
+          </div>
+          <button type="submit" class="submit-btn">Sign Up</button>
+          <p class="login-link">Already have an account? <a href="#">Login</a></p>
+        </form>
+      </div>
+    </main>
 
-  <footer class="footer">
-    <div class="footer-left">© vidco</div>
-    <div class="footer-links">
-      <a href="#">About Vidco</a>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-    </div>
-  </footer>
+    <!-- Footer - Same as About Page -->
+     <footer>
+      <div class="footer-left">
+        <div class="logo">
+          <img src="/images/Vector.png" alt="Vidco logo">
+          <span class="logo-text">vidco</span>
+        </div>
+        <a href="#" class="about-link">About Vidco</a>
+      </div>
+      <div class="footer-right">
+        <a href="#" class="footer-link">Privacy</a>
+        <a href="#" class="footer-link">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
