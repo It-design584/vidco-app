@@ -45,7 +45,7 @@ header {
 .logo-text {
   color: #9b4dca;
   font-weight: 600;
-  font-size: 20px;
+  font-size:25px;
 }
 
 /* Desktop Navigation */
@@ -59,7 +59,7 @@ header {
   display: flex;
   list-style: none;
   gap: 30px;
-  margin-left: 1200px;
+  margin-left: 450px;
 }
 
 .desktop-nav a {
@@ -532,7 +532,7 @@ footer {
 .footer-link {
   color: #333;
   text-decoration: none;
-  font-size: 14px;
+  font-size:14px;
 }
 
 /* Responsive Design - ADJUSTED BREAKPOINTS */

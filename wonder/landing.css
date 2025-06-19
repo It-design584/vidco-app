@@ -61,14 +61,14 @@ a {
 .desktop-nav {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
 }
 
 .desktop-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  margin-left: 200px;
+  display:flex;
+  list-style:none;
+  gap:10px;
+  margin-right:20px;
 }
 
 .desktop-nav a {
@@ -77,14 +77,10 @@ a {
   font-size: 14px;
   transition: color 0.3s ease, transform 0.2s ease;
   position: relative;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
 }
 
 .desktop-nav a:hover {
-  color: #6a00ff;
-  background: rgba(106, 0, 255, 0.1);
-  border: 1px solid #6a00ff;
+  color: #9b4dca;
   transform: translateY(-2px);
 }
 
@@ -95,7 +91,7 @@ a {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #6a00ff;
+  background-color: #9b4dca;
   transition: width 0.3s ease;
 }
 
@@ -466,105 +462,67 @@ a {
   transform: translateY(-2px);
 }
 
-/* Footer Styles - Matching verification page exactly */
+/* Footer Styles - FIXED FOR PROPER HORIZONTAL ALIGNMENT */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px; /* Reduced horizontal padding */
+  padding: 20px 30px;
   background: #ffffff;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #f0f0f0;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .footer-left {
   display: flex;
   align-items: center;
-  gap: 12px; /* Reduced gap to make it more compact */
-  margin-left: 10px; /* Push further left */
+  gap: 15px;
 }
 
-.logo {
+.footer-left .logo {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.logo img {
+.footer-left .logo img {
   width: 24px;
   height: 24px;
 }
 
-.logo-text {
-  color: #9b4dca;
+.footer-left .logo-text {
+  color: #6a00ff;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .about-link {
-  color: #333;
+  color: #000;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s ease, transform 0.2s ease;
-  position: relative;
-  line-height: 1;
+  transition: color 0.3s ease;
 }
 
 .about-link:hover {
-  color: #9b4dca;
-  transform: translateY(-2px);
-}
-
-.about-link::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #9b4dca;
-  transition: width 0.3s ease;
-}
-
-.about-link:hover::after {
-  width: 100%;
+  color: #5500cc;
 }
 
 .footer-right {
   display: flex;
-  align-items: center;
   gap: 15px;
-  margin-right: 10px; /* Push further right */
 }
 
 .footer-link {
-  color: #333;
+  color: #000;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s ease, transform 0.2s ease;
-  position: relative;
-  line-height: 1;
+  transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #9b4dca;
-  transform: translateY(-2px);
-}
-
-.footer-link::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #9b4dca;
-  transition: width 0.3s ease;
-}
-
-.footer-link:hover::after {
-  width: 100%;
+  color: #5500cc;
 }
 
 /* Responsive Design */
@@ -636,54 +594,10 @@ footer {
     justify-content: center;
   }
 
-  /* Remove hover effects on mobile and add touch states */
-  .mobile-menu-btn:hover {
-    transform: none;
-  }
-
-  .mobile-menu-btn:active {
-    transform: scale(0.95);
-    background-color: rgba(106, 0, 255, 0.1);
-    border-radius: 4px;
-  }
-
-  .mobile-menu-btn:hover span {
-    background-color: #333;
-    transform: none;
-  }
-
-  .mobile-menu-btn:active span {
-    background-color: #6a00ff;
-  }
-
-  .mobile-menu-btn:hover span:nth-child(1),
-  .mobile-menu-btn:hover span:nth-child(2),
-  .mobile-menu-btn:hover span:nth-child(3) {
-    transform: none;
-  }
-
   .mobile-nav {
     display: block;
   }
 
-  /* Touch-friendly mobile nav links */
-  .mobile-nav a {
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-  }
-
-  .mobile-nav a:hover {
-    color: #000000;
-  }
-
-  .mobile-nav a:active {
-    background-color: rgba(106, 0, 255, 0.1);
-    color: #6a00ff;
-    transform: scale(0.98);
-  }
-
-  /* Touch-friendly sign up button */
   .signup-btn {
     font-size: 12px;
     padding: 8px 14px;
@@ -692,17 +606,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .signup-btn:hover {
-    background-color: transparent;
-    color: #141eff;
-  }
-
-  .signup-btn:active {
-    background-color: #141eff;
-    color: white;
-    transform: scale(0.98);
   }
 
   .hero {
@@ -725,17 +628,6 @@ footer {
     max-width: 100%;
   }
 
-  /* Remove hover effects from feature items on mobile */
-  .feature-item:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
-  .feature-item:active {
-    transform: scale(0.98);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
   .middle-section,
   .features,
   .cta {
@@ -751,29 +643,22 @@ footer {
     max-width: 280px;
   }
 
-  /* Footer mobile styles - matching verification page */
+  /* Footer maintains horizontal alignment on mobile */
   footer {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Increased gap for more space */
-    padding: 15px 5px; /* Reduced horizontal padding */
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 20px;
+    flex-wrap: nowrap;
   }
 
   .footer-left {
     display: flex;
     align-items: center;
-    gap: 8px; /* Reduced gap */
+    gap: 10px;
     flex-shrink: 0;
-    margin-left: 5px; /* Push further left */
-  }
-
-  .footer-left .logo {
-    gap: 8px;
   }
 
   .footer-left .logo img {
@@ -781,61 +666,24 @@ footer {
     height: 20px;
   }
 
-  .logo-text {
-    font-size: 14px;
+  .footer-left .logo-text {
+    font-size: 16px;
   }
 
   .about-link {
     font-size: 12px;
     white-space: nowrap;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    line-height: 1;
-  }
-
-  .about-link:hover {
-    color: #333;
-    transform: none;
-  }
-
-  .about-link:hover::after {
-    width: 0;
-  }
-
-  .about-link:active {
-    background-color: rgba(155, 77, 202, 0.1);
-    color: #9b4dca;
   }
 
   .footer-right {
     display: flex;
-    gap: 8px; /* Reduced internal gap */
+    gap: 10px;
     flex-shrink: 0;
-    margin-right: 5px; /* Push further right */
   }
 
   .footer-link {
     font-size: 12px;
     white-space: nowrap;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    line-height: 1;
-  }
-
-  .footer-link:hover {
-    color: #333;
-    transform: none;
-  }
-
-  .footer-link:hover::after {
-    width: 0;
-  }
-
-  .footer-link:active {
-    background-color: rgba(155, 77, 202, 0.1);
-    color: #9b4dca;
   }
 }
 
@@ -845,7 +693,6 @@ footer {
     padding: 10px 15px;
   }
 
-  /* Ensure minimum touch target sizes */
   .mobile-menu-btn {
     padding: 8px;
     min-width: 44px;
@@ -872,13 +719,12 @@ footer {
   }
 
   footer {
-    padding: 12px 5px; /* Reduced horizontal padding */
-    gap: 15px; /* Increased gap */
+    padding: 12px 15px;
+    gap: 8px;
   }
 
   .footer-left {
-    gap: 6px;
-    margin-left: 5px; /* Push further left */
+    gap: 8px;
   }
 
   .footer-left .logo img {
@@ -886,40 +732,35 @@ footer {
     height: 18px;
   }
 
-  .logo-text {
-    font-size: 13px;
+  .footer-left .logo-text {
+    font-size: 14px;
   }
 
   .about-link {
     font-size: 11px;
-    padding: 6px 10px;
   }
 
   .footer-right {
-    gap: 6px;
-    margin-right: 5px; /* Push further right */
+    gap: 8px;
   }
 
   .footer-link {
     font-size: 11px;
-    padding: 6px 10px;
   }
 }
 
 /* Large screens - ensure proper spacing */
 @media (min-width: 1200px) {
   footer {
-    padding: 22px 10px; /* Maintain reduced horizontal padding */
+    padding: 22px 30px;
   }
 
   .footer-left {
-    gap: 12px; /* Keep compact gap */
-    margin-left: 15px; /* Push further left on large screens */
+    gap: 18px;
   }
 
   .footer-right {
-    gap: 18px;
-    margin-right: 15px; /* Push further right on large screens */
+    gap: 25px;
   }
 
   .desktop-nav ul {
