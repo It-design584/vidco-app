@@ -30,10 +30,13 @@ header {
   align-items: center;
   padding: 15px 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%; 
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
-  z-index: 100;
+  z-index: 1000;
 }
 
 .logo {
@@ -231,6 +234,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  padding-top: 100px; /* 👈 Add this line */
   position: relative;
   z-index: 1;
 }
@@ -250,9 +254,11 @@ header {
 .form-container h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+  margin-top: 30px;
   font-weight: 700;
   font-size: 1.8rem;
   color: white;
+  
 }
 
 .form-group {
@@ -353,9 +359,9 @@ footer {
   transition: color 0.3s ease;
 }
 
-.about-link:hover {
+/* .about-link:hover {
   color: #9b4dca;
-}
+} */
 
 .footer-right {
   display: flex;
@@ -369,11 +375,10 @@ footer {
   transition: color 0.3s ease;
 }
 
-.footer-link:hover {
+/* .footer-link:hover {
   color: #9b4dca;
-}
+} */
 
-/* Responsive Design - MATCHING ABOUT PAGE BREAKPOINTS */
 
 /* Medium screens / split screen (640px - 1023px) */
 @media (max-width: 1023px) and (min-width: 641px) {
@@ -418,6 +423,12 @@ footer {
   header {
     padding: 15px 20px;
     gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000; */
   }
 
   /* Hide desktop nav and show mobile menu button */
@@ -579,9 +590,9 @@ footer {
     transition: all 0.2s ease;
   }
 
-  .about-link:hover {
+  /* .about-link:hover {
     color: #ffffff;
-  }
+  } */
 
   .about-link:active {
     background-color: rgba(155, 77, 202, 0.1);
@@ -602,9 +613,9 @@ footer {
     transition: all 0.2s ease;
   }
 
-  .footer-link:hover {
+  /* .footer-link:hover {
     color: #ffffff;
-  }
+  } */
 
   .footer-link:active {
     background-color: rgba(155, 77, 202, 0.1);

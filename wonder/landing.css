@@ -505,9 +505,9 @@ footer {
   transition: color 0.3s ease;
 }
 
-.about-link:hover {
+/* .about-link:hover {
   color: #5500cc;
-}
+} */
 
 .footer-right {
   display: flex;
@@ -521,9 +521,9 @@ footer {
   transition: color 0.3s ease;
 }
 
-.footer-link:hover {
+/* .footer-link:hover {
   color: #5500cc;
-}
+} */
 
 /* Responsive Design */
 
