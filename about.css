@@ -28,6 +28,7 @@ header {
   padding: 15px 30px;
   border-bottom: 1px solid #f7f7f7;
   position: relative;
+   z-index: 1000;
 }
 
 .logo {
@@ -51,15 +52,15 @@ header {
 /* Desktop Navigation */
 .desktop-nav {
   flex: 1;
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
 }
 
 .desktop-nav ul {
   display: flex;
   list-style: none;
   gap: 30px;
-  margin-left: 1200px;
+  margin-left: 450px;
 }
 
 .desktop-nav a {
@@ -581,11 +582,29 @@ footer {
 }
 
 /* Small screens / mobile (640px and below) */
-@media (max-width: 640px) {
-  header {
+/* @media (max-width: 640px) {
+  .header {
     padding: 15px 20px;
     gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1003;
   }
+} */
+ @media (max-width: 640px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1003; /* or higher if needed */
+    background-color: #fff; 
+  }
+}
+
 
   /* Hide desktop nav and show mobile menu button */
   .desktop-nav {
@@ -658,11 +677,11 @@ footer {
 
   .sign-up-btn:hover {
     background-color: transparent;
-    color: #c76bda;
+    color:#141EFF;
   }
 
   .sign-up-btn:active {
-    background-color: #c76bda;
+    background-color: #141EFF;
     color: white;
     transform: scale(0.98);
   }
@@ -690,6 +709,7 @@ footer {
 
   .hero h1 {
     font-size: 28px;
+    margin-top: 40px;
   }
 
   .hero p {
